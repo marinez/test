@@ -39,3 +39,6 @@ build/
 !/src/main/java/fr/insy2s/sesame/controller/TestApiController.java
 !/src/main/java/fr/insy2s/sesame/service/impl/TestApiServiceImpl.java
 !/src/main/java/fr/insy2s/sesame/service/ITestApiService.java
+!/src/main/java/fr/insy2s/sesame/controller/TestApiController.java
+!/src/main/java/fr/insy2s/sesame/service/ITestApiService.java
+!/src/main/java/fr/insy2s/sesame/service/impl/TestApiServiceImpl.java
