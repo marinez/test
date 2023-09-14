@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head>
+    <title>Activation de compte</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<p th:text="${'Bonjour ' + username}">
+    Bonjour
+</p>
+<p>
+    Votre compte a été créé avec succès. Pour l'activer, veuillez cliquer sur le lien ci-dessous :
+</p>
+<p>
+    <a th:with="url=${baseUrl + '/first-connection?key=' + activationKey}" th:href="${url}" th:text="${url}">
+        Activation de compte
+    </a>
+</p>
+<p>
+    <span>Cordialement, </span>
+    <br/>
+    <em>Super-Sesame</em>
+</p>
+</body>
+</html>

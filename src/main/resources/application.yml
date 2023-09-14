@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: super-sesame
+  profiles:
+    active: dev
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: none
+

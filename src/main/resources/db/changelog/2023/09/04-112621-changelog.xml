@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.19.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="1693819581394-1" author="Marine-Zimmer (generated)">
+        <dropNotNullConstraint columnDataType="varchar(255)" columnName="city" tableName="address"/>
+    </changeSet>
+    <changeSet id="1693819581394-2" author="Marine-Zimmer (generated)">
+        <dropNotNullConstraint columnDataType="varchar(255)" columnName="country" tableName="address"/>
+    </changeSet>
+    <changeSet id="1693819581394-3" author="Marine-Zimmer (generated)">
+        <dropNotNullConstraint columnDataType="varchar(255)" columnName="street" tableName="address"/>
+    </changeSet>
+    <changeSet id="1693819581394-4" author="Marine-Zimmer (generated)">
+        <dropNotNullConstraint columnDataType="varchar(255)" columnName="zip_code" tableName="address"/>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,68 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: super-sesame
+  datasource:
+    url: jdbc:postgresql://${DB_SERVER:localhost:5432}/supersesame
+    username: postgres
+    password: postgres
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: devinsy2s@gmail.com
+    password: wxhzgiehqhokutop
+    protocol: smtp
+    properties.mail.smtp:
+      auth: true
+      starttls.enable: true
+  messages:
+    cache-duration: PT1S
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/mail/
+    suffix: .html
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: none
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+#        format_sql: true
+        jdbc:
+          time_zone: UTC
+#    show-sql: true
+    database: postgresql
+    generate-ddl: true
+    open-in-view: true
+  cloud:
+    openfeign:
+      circuitbreaker:
+        enabled: true
+  liquibase:
+    change-log: classpath:db/db.changelog-master.xml
+    contexts: dev, faker
+    enabled: true
+
+application:
+  security:
+    cors:
+      origin: http://localhost:5173
+      max-age: 3600
+    jwt:
+      secret-key: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+      expiration-time: 86400000 # 1 day
+      refresh-token:
+        expiration-time: 2592000000 # 30 days
+  role:
+    default: ROLE_USER
+  front:
+    url: http://localhost:5173
+
+logging:
+  level:
+    liquibase: INFO
+    fr.insy2s: DEBUG
